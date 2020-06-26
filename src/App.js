@@ -11,8 +11,12 @@ function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
+/******************************************** wrote the addItem function *********************************************/
 	const addItem = item => {
 		// add the given item to the cart
+		if( !cart.includes(item)){
+			setCart([...cart,item])
+		} 
 	};
 
 	return (
